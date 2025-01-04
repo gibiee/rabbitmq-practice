@@ -32,9 +32,10 @@ def start_consumer() :
 if __name__ == '__main__':
     try:
         WORKERS = 2
+        
+        # executor = concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS)
+        executor = concurrent.futures.ProcessPoolExecutor(max_workers=WORKERS)
         consumers = []
-        # executor = concurrent.futures.ThreadPoolExecutor()
-        executor = concurrent.futures.ProcessPoolExecutor()
         for i in range(WORKERS):
             job = executor.submit(start_consumer)
             print('-----', type(job), job)
