@@ -2,7 +2,7 @@
 RabbitMQ 실습
 
 ### ID / PW : keonmin / 123
-sudo rabbitmqctl add_user keonmin 123
+sudo rabbitmqctl add_user keonmin 123  
 sudo rabbitmqctl set_user_tags keonmin administrator
 
 ### 접속 (포트포워딩 필요)
